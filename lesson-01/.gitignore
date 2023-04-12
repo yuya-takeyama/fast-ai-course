@@ -1,0 +1,11 @@
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.jpg!d
+*.jpeg!d
+*.JPG!d
+*.JPEG!d
+
+*.png
+*.PNG
