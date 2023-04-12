@@ -1,10 +1,10 @@
-from duckduckgo_search import ddg_images
-from fastcore.all import *
-from fastdownload import download_url
-from fastai.vision.all import *
 from time import sleep
+from duckduckgo_search import ddg_images
+from fastcore.all import L, Path
+from fastdownload import download_url
+from fastai.vision.all import download_images, resize_images, DataBlock, ImageBlock, CategoryBlock, get_image_files, verify_images, RandomSplitter, parent_label, vision_learner, Image, Resize, resnet18, error_rate, PILImage
 
-def search_images(term, max_images=30):
+def search_images(term: str, max_images=30):
     print(f"Searching for '{term}'")
     return L(ddg_images(term, max_results=max_images)).itemgot('image')
 
